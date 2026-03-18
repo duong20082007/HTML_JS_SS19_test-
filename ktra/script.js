@@ -1,11 +1,12 @@
 let registerForm = document.getElementById("register-form");
-let fullname = document.getElementById("fullName").value.trim();
-let username = document.getElementById("userName").value.trim();
-let password = document.getElementById("password").value;
-let confirmPass = document.getElementById("confirm-password").value;
 
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault(); 
+    let fullname = document.getElementById("fullName").value.trim();
+    let username = document.getElementById("userName").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPass = document.getElementById("confirm-password").value;
+
 
     if (!fullname || !username || !password || !confirmPass) {
         alert("Các ô không được để trống");
@@ -21,6 +22,7 @@ registerForm.addEventListener("submit", (e) => {
         alert("Mật khẩu phải có ít nhất 6 ký tự");
         return;
     }
+    
     if (password !== confirmPass) {
         alert("Mật khẩu không trùng");
         return;
